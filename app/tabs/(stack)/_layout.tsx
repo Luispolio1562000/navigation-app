@@ -5,7 +5,7 @@ const StackLayout = () => {
   return (
     <Stack
       screenOptions={{
-        //headerShown: false,
+        headerShown: false,
         headerShadowVisible: false,
         contentStyle: {
           backgroundColor: "#ffffff",
@@ -13,25 +13,25 @@ const StackLayout = () => {
       }}
     >
       <Stack.Screen
-        name="home/index"
+        name="/tabs/(stack)/home"
         options={{
           title: "Home",
         }}
       />
       <Stack.Screen
-        name="profile/index"
+        name="/tabs/(stack)/profile"
         options={{
           title: "Perfil",
         }}
       />
       <Stack.Screen
-        name="products/index"
+        name="/tabs/(stack)/products"
         options={{
           title: "Productos",
         }}
       />
       <Stack.Screen
-        name="products/[id]"
+        name="/tabs/(stack)/products/[id]"
         options={{
           title: "Detalle del producto",
         }}
@@ -45,7 +45,7 @@ const StackLayout = () => {
         }}
       />
       <Stack.Screen
-        name="settings/index"
+        name="/tabs/(stack)/settings"
         options={{
           title: "Ajustes",
         }}

@@ -29,6 +29,15 @@ const TabsLayout = () => {
           ),
         }}
       />
+      <Tabs.Screen
+        name="(stack)"
+        options={{
+          title: "Stack",
+          tabBarIcon: ({ color }) => (
+            <Ionicons size={28} name="options" color={color} />
+          ),
+        }}
+      />
     </Tabs>
   );
 };
