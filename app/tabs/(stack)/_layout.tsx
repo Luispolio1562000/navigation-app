@@ -13,25 +13,25 @@ const StackLayout = () => {
       }}
     >
       <Stack.Screen
-        name="/tabs/(stack)/home"
+        name="home/index"
         options={{
           title: "Home",
         }}
       />
       <Stack.Screen
-        name="/tabs/(stack)/profile"
+        name="profile/index"
         options={{
           title: "Perfil",
         }}
       />
       <Stack.Screen
-        name="/tabs/(stack)/products"
+        name="products/index"
         options={{
           title: "Productos",
         }}
       />
       <Stack.Screen
-        name="/tabs/(stack)/products/[id]"
+        name="products/[id]"
         options={{
           title: "Detalle del producto",
         }}
@@ -45,7 +45,7 @@ const StackLayout = () => {
         }}
       />
       <Stack.Screen
-        name="/tabs/(stack)/settings"
+        name="settings/index"
         options={{
           title: "Ajustes",
         }}
