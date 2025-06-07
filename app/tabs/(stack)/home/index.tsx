@@ -12,7 +12,7 @@ const HomeScreen = () => {
         </Link>
 
         <CustomButton
-          onPress={() => router.push("/tabs/(stack)/profile")}
+          onPress={() => router.push("/tabs/(stack)/products")}
           color="primary"
         >
           Productos

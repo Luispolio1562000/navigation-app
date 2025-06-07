@@ -1,11 +1,14 @@
 import React from "react";
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const FavoritesScreen = () => {
   return (
-    <View>
-      <Text>FavoritesScreen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>FavoritesScreen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
 
