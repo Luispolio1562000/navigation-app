@@ -18,6 +18,16 @@ const DrawerLayout = () => {
       }}
     >
       <Drawer.Screen
+        name="tabs"
+        options={{
+          drawerLabel: "Tabs and Stack",
+          title: "Tabs and Stack",
+          drawerIcon: ({ color, size }) => (
+            <Ionicons size={size} name="albums-outline" color={color} />
+          ),
+        }}
+      />
+      <Drawer.Screen
         name="user/index"
         options={{
           drawerLabel: "User",
