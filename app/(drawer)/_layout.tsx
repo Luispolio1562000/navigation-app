@@ -25,6 +25,7 @@ const DrawerLayout = () => {
           drawerIcon: ({ color, size }) => (
             <Ionicons size={size} name="albums-outline" color={color} />
           ),
+          headerShown: false,
         }}
       />
       <Drawer.Screen
