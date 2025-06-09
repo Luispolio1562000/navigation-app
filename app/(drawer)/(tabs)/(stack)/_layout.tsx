@@ -1,15 +1,39 @@
-import { Stack } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
+import { DrawerActions } from "@react-navigation/native";
+import { Stack, useNavigation, useRouter } from "expo-router";
 import React from "react";
+import { Platform } from "react-native";
 
 const StackLayout = () => {
+  const navigation = useNavigation();
+  const router = useRouter();
+  const onToggleDrawer = (canGoBack: boolean | undefined) => {
+    if (canGoBack) {
+      router.back();
+      return;
+    }
+    navigation.dispatch(DrawerActions.toggleDrawer);
+  };
+
+  const os = Platform.OS === "ios";
+
   return (
     <Stack
       screenOptions={{
         headerShown: true,
         headerShadowVisible: false,
         contentStyle: {
-          backgroundColor: "#ffffff",
+          backgroundColor: "transparent",
         },
+        headerLeft: ({ tintColor, canGoBack }) => (
+          <Ionicons
+            name={canGoBack ? "arrow-back-outline" : "grid-outline"}
+            color="#00586D"
+            size={20}
+            className={os ? "" : "mr-2"}
+            onPress={() => onToggleDrawer(canGoBack)}
+          />
+        ),
       }}
     >
       <Stack.Screen
