@@ -7,12 +7,12 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <View className="flex flex-col gap-4 p-4">
-        <Link href={"/drawer/tabs/(stack)/profile"} asChild>
+        <Link href={"/(drawer)/(tabs)/(stack)/profile"} asChild>
           <CustomButton color="secondary">Perfil</CustomButton>
         </Link>
 
         <CustomButton
-          onPress={() => router.push("/drawer/tabs/products")}
+          onPress={() => router.push("/(drawer)/(tabs)/(stack)/products")}
           color="primary"
         >
           Productos
@@ -20,7 +20,7 @@ const HomeScreen = () => {
         <CustomButton
           variant="contained"
           color="tertiary"
-          onPress={() => router.push("/drawer/tabs/(stack)/fonts")}
+          onPress={() => router.push("/(drawer)/(tabs)/(stack)/fonts")}
         >
           Fuentes
         </CustomButton>
@@ -28,7 +28,7 @@ const HomeScreen = () => {
         <CustomButton
           variant="text-only"
           color="tertiary"
-          onPress={() => router.push("/drawer/tabs/settings")}
+          onPress={() => router.push("/(drawer)/(tabs)/(stack)/settings")}
         >
           Ajustes
         </CustomButton>
